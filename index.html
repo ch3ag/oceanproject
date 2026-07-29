@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#063c4a" />
+    <title>OCEAN PROJECT | 광안리 클린 가이드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="top">
+        <nav class="nav shell">
+          <a class="brand" href="#top" aria-label="Ocean Project home"><span class="brand-dot"></span> OCEAN<br />PROJECT</a>
+          <button class="language-switch" id="change-language" type="button"><span>◎</span> <span data-i18n="changeLanguage">언어</span></button>
+        </nav>
+        <div class="hero-content shell">
+          <p class="eyebrow" data-i18n="eyebrow">GWANGALLI BEACH · BUSAN</p>
+          <h1 data-i18n="heroTitle">바다를 즐기는<br /><em>가장 깨끗한</em> 방법</h1>
+          <p class="hero-copy" data-i18n="heroCopy">광안리 해수욕장에서 가까운 공중화장실을 찾고, 올바른 분리배출 방법을 확인하세요.</p>
+          <a class="down-link" href="#toilets" data-i18n="start">안내 시작하기 <span>↓</span></a>
+        </div>
+        <div class="wave" aria-hidden="true"></div>
+      </section>
+
+      <section class="section shell" id="toilets">
+        <div class="section-number">01</div>
+        <div class="section-heading">
+          <p class="eyebrow dark" data-i18n="stepOne">STEP 01 · NEARBY GUIDE</p>
+          <h2 data-i18n="toiletTitle">가까운 공중화장실<br />찾기</h2>
+          <p data-i18n="toiletCopy">위치 접근을 허용하면 현재 위치에서 가장 가까운 공중화장실을 안내합니다.</p>
+        </div>
+        <div class="location-card">
+          <div class="location-icon">⌖</div>
+          <div><strong data-i18n="locationReady">현재 위치를 확인할까요?</strong><p data-i18n="locationHint">위치 정보는 이 기기에서만 사용됩니다.</p></div>
+          <button class="primary-button" id="find-location" type="button" data-i18n="allowLocation">위치 허용하기</button>
+        </div>
+        <div class="toilet-result hidden" id="toilet-result" aria-live="polite"></div>
+        <p class="map-note" data-i18n="mapNote">길찾기 버튼을 누른 뒤 네이버 지도에 출발지와 안내받은 목적지를 입력해 주세요.</p>
+      </section>
+
+      <section class="recycle-section" id="recycle">
+        <div class="shell recycle-grid">
+          <div>
+            <div class="section-number light">02</div>
+            <p class="eyebrow" data-i18n="stepTwo">STEP 02 · SORT SMART</p>
+            <h2 data-i18n="recycleTitle">사진으로 묻고,<br /><em>제대로 버리기</em></h2>
+            <p class="recycle-copy" data-i18n="recycleCopy">분리배출이 헷갈릴 때 사진을 AI에 보여주세요. 재질과 오염 여부에 따른 처리법을 쉽게 확인할 수 있어요.</p>
+            <div class="prompt-box">
+              <p class="prompt-label" data-i18n="promptLabel">AI에 이렇게 물어보세요</p>
+              <p id="prompt-text">내가 지금 올린 사진을 보고 이 쓰레기가 어디에 분류되고 어떻게 처리를 해야하는 지 분리수거 방법을 알려줄래? 그리고 주의사항 3가지도 알려줘.</p>
+              <button class="copy-button" id="copy-prompt" type="button"><span>□</span> <span data-i18n="copy">프롬프트 복사</span></button>
+            </div>
+          </div>
+          <div class="guide-side">
+            <div class="four-steps" aria-label="4 step recycling guide">
+              <div><span>1</span><strong data-i18n="s1t">비우기</strong><p data-i18n="s1d">내용물은 비워요</p></div>
+              <div><span>2</span><strong data-i18n="s2t">헹구기</strong><p data-i18n="s2d">이물질을 씻어요</p></div>
+              <div><span>3</span><strong data-i18n="s3t">분리하기</strong><p data-i18n="s3d">재질별로 나눠요</p></div>
+              <div><span>4</span><strong data-i18n="s4t">배출하기</strong><p data-i18n="s4d">정해진 곳에 버려요</p></div>
+            </div>
+            <label class="upload-zone" for="photo-input"><input id="photo-input" type="file" accept="image/*" /><span class="upload-symbol">↑</span><strong data-i18n="uploadTitle">쓰레기 사진 올리기</strong><small data-i18n="uploadHint">사진을 선택해 AI 분석에 사용하세요</small><img id="preview" alt="" /></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell issue-section" id="issue">
+        <div class="section-number">03</div>
+        <div class="issue-layout">
+          <div><p class="eyebrow dark" data-i18n="stepThree">STEP 03 · KEEP IT BLUE</p><h2 data-i18n="issueTitle">잠깐의 방치가<br />모두의 바다를 바꿉니다</h2></div>
+          <div class="issue-card"><p class="issue-tag" data-i18n="issueTag">LOCAL ISSUE</p><h3 data-i18n="issueHeadline">해변 쓰레기 문제,<br />함께 줄여요.</h3><p data-i18n="issueCopy">해변에 남겨진 쓰레기는 바다로 흘러가 생태계에 오래 남습니다. 가져온 쓰레기는 다시 가져가거나 알맞게 분리배출해 주세요.</p><a href="https://www.kookje.co.kr/news2011/asp/newsbody.asp?key=20220531.22012008309" target="_blank" rel="noopener" data-i18n="readArticle">관련 기사 보기 ↗</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>OCEAN PROJECT</span><p data-i18n="footer">작은 실천으로 더 깨끗한 광안리를 만듭니다.</p></footer>
+
+    <dialog id="language-modal"><div class="language-panel"><span class="small-mark">OCEAN PROJECT</span><h2>Choose your language</h2><p>언어를 선택해 주세요</p><div class="language-options"><button data-lang="ko">한국어 <small>Korean</small></button><button data-lang="en">English <small>영어</small></button><button data-lang="ja">日本語 <small>Japanese</small></button><button data-lang="zh">中文 <small>Chinese</small></button></div></div></dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
